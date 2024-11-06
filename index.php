@@ -18,7 +18,7 @@ for ($i = 0; $i < count($chats_list); $i++) {
     try {
         $bot->send((new Message($chats->getNameByChatID($chats_list[$i])))->getMessage());
     } catch (Exception $e) {
-        echo $e->getMessage();
+        dump($e->getMessage());
     }
 }
 
